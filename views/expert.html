@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expert IT - Programming Solutions</title>
+        <link rel="stylesheet" href="./navbar2.css"/>
+    <link rel="stylesheet" href="expert.css">
+    <!--link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="icon" href="assets/favicon.ico" type="image/x-icon"-->
+
+    
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <nav class="navbar">
+            <span href="#" class="nav-logo">Elitetraders.US</span>
+
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+            </div>
+        </nav>
+</header>
+    <!-- Hero Section -->
+    <section class="hero">
+        <h1>Welcome to Expert IT</h1>
+        <p>Your one-stop solution for innovative programming and IT services.</p>
+        <a href="#services" class="btn">Explore Services</a>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <h2 id="our-services">Our Services</h2>
+        <div class="service-item">
+            <i class="fas fa-laptop-code"></i>
+            <h3>Web Development</h3>
+            <p>Creating responsive and dynamic websites tailored to your needs.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-database"></i>
+            <h3>Database Management</h3>
+            <p>Efficient database solutions to manage your data seamlessly.</p>
+        </div>
+        <div class="service-item">
+            <i class="fas fa-mobile-alt"></i>
+            <h3>App Development</h3>
+            <p>Custom mobile and desktop app development services.</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <h2>About Us</h2>
+        <p>Expert IT is a leading programming solutions provider with a commitment to delivering top-notch IT services to businesses of all sizes. Our team of expert developers and IT professionals ensures quality, innovation, and efficiency in every project we handle.</p>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <h2>Our Projects</h2>
+        <div class="project-grid">
+            <div class="project-item">
+                <i class="fas fa-project-diagram"></i>
+                <h3>Project Alpha</h3>
+                <p>A cutting-edge e-commerce platform.</p>
+            </div>
+            <div class="project-item">
+                <i class="fas fa-cloud"></i>
+                <h3>Project Beta</h3>
+                <p>Cloud-based data storage solutions.</p>
+            </div>
+            <div class="project-item">
+                <i class="fas fa-robot"></i>
+                <h3>Project Gamma</h3>
+                <p>An AI-powered analytics tool.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <h2>Contact Us</h2>
+        <form>
+            <input type="text" placeholder="Your Name" required>
+            <input type="email" placeholder="Your Email" required>
+            <textarea placeholder="Your Message" required></textarea>
+            <button type="submit" class="btn">Send Message</button>
+        </form>
+    </section>
+<!-- Popup Modal -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <button id="popup-close" class="popup-close">&times;</button>
+        <h2>Welcome to Expert IT!</h2>
+        <p>We provide the best IT solutions tailored to your needs. Explore our services to learn more.</p>
+    </div>
+</div>
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Expert IT. All rights reserved.</p>
+        <div class="social-links">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
+        </div>
+    </footer>
+
+    <script >
+        // Popup Modal Logic
+document.addEventListener("DOMContentLoaded", () => {
+    const popup = document.getElementById("popup");
+    const closeButton = document.getElementById("popup-close");
+
+    // Show popup when the page loads
+    popup.style.display = "flex";
+
+    // Hide popup when the close button is clicked
+    closeButton.addEventListener("click", () => {
+        popup.style.display = "none";
+    });
+
+    // Optional: Close popup when clicking outside of it
+    popup.addEventListener("click", (event) => {
+        if (event.target === popup) {
+            popup.style.display = "none";
+        }
+    });
+});
+ 
+    </script>
+    <script src="steve_invest.js" type="text/javascript" charset="utf-8"></script>
+</body>
+</html>

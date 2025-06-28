@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="./css/dashnav.css">
+    <link rel="stylesheet" href="./css/dashboard.css">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <span href="#" class="nav-logo">EliteFxtraders.US</span>
+            <i class="fa fa-bell-o"></i>
+            <i class="far fa-user-circle" style="color: white"></i>
+            
+            <ul class="nav-menu">
+                
+ <div class="dropdown">
+    <div class="dropbtn">
+        <button>A</button>
+        <span class="but">
+        Abu Bin Ishityak<br>
+        <span class="span">info@nio.com</span>
+              <i class="fa fa-caret-down"></i>
+ 
+        </span>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>  
+                
+                <li class="nav-item">
+                    <a href="crypto.html" class="nav-link" id="active">
+     <i class="fa fa-dashboard"></i>Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plan.html" class="nav-link">
+           
+                        My Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#2" class="nav-link">
+                        <i class='fas fa-wallet' style='font-size:24px'></i>
+                        Wallets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="profile.html" class="nav-link">My Profile</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="/faqs.html" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#1" class="nav-link">Contact</a>
+                </li>
+                <div class="controls">
+                    <a href="/steve_invest_signup.html">
+                        <button id="sign_in" class="sign_in">Sign Up</button>
+                    </a>
+                    <button class="open-button" onclick="openForm()">Log in</button>
+                    </div>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+            </div>
+        </nav>
+</header>    
+<div class="body">
+    <div class="greetings">
+        <span>Welcome!</span>
+        <span><%= username %></span>
+        <span>At a glance summary of your account</span>
+    </div>
+
+    <div class="trans_buttons">
+        <!--a href="./plan.html"-->
+        <button>Deposit &rarr;</button>
+        <button>Withdraw</button>
+    </div>
+    
+    <div class="overview">
+    <span>Overview</span>
+        <div class="activity-board">
+            <div class="board-text">
+        <div>Available balance in USD</div>
+        <div>$<%= wallet_balance %></div>
+        <div>
+        <span>
+            Wallets 
+        </span>
+        <span>
+            Transactions
+        </span>
+
+        </div>
+        <div class="values">
+            <span>0</span>
+            <span>0</span>
+        </div>
+    <summary>Last activity at 19 Nov, 2019</span>
+            </div>
+    </div>
+    </div>
+
+    <div class="Wallets">
+        <div class="dig-wall">Digital Wallets</div>
+        <div class="see_all">See All</div>
+            <div class="curr_wallets">
+            <div class="tile">
+                <div class="tile_txt">NioWallet</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+            </div>
+            <div class="tile">
+                        <i class="fa fa-btc" style="font-size:24px; color: brown;"></i>
+ 
+            <div class="tile_txt">Bitcoin Wallet</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+        </div>
+            <div class="tile">
+                <div class="tile_txt">
+                Etherum Wallet</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+
+                </div>
+            </div>
+    </div>
+    
+    <div class="Wallets">
+        <div class="dig-wall">Fiat Accounts</div>
+        <div class="see_all">See All</div>
+            <div class="curr_wallets">
+            <div class="tile">
+                <div class="tile_txt">NioWallet</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+      
+            </div>
+            <div class="tile">
+            <div class="tile_txt">Profit</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+      
+        </div>
+            <div class="tile">
+                <div class="tile_txt">
+                Etherum Wallet</div>
+                <div class="tile_fig">
+                    $0.000
+                </div>
+      
+                </div>
+            </div>
+            </div>
+
+
+    <h2 class="plan">Choose an Investment Plan</h2>
+    <form action="/invest" method="post">
+        <select name="plan" required>
+            <option value="" class="plan-option">--Select a Plan--</option>
+            <option value="basic">Basic - min: $100 max: $499 - 10% in 7 days</option>
+            <option value="silver">Silver - min: $500  max: $4999</option>
+            <option value="gold">Gold - min: 5000  max: 24999 - 25% in 30 days</option>
+            <br><br>
+        </select>
+<div>
+        <label>Enter amount:   </label>
+</div>
+<div class="buttons">
+        <input type="number" name="amount" required /><br><br>
+        <button type="submit" class="invest">Invest Now</button>
+        </div>
+    </form>
+
+    <table>
+  <tr>
+    <th>Plan</th>
+    <th>Amount</th>
+    <th>ROI</th>
+    <th>Start Date</th>
+    <th>Status</th>
+  </tr>
+  <% investmentsResult.forEach(inv => { %>
+    <tr>
+      <td><%= inv.plan %></td>
+      <td>₦<%= inv.amount %></td>
+      <td><%= inv.roi %>% over <%= inv.duration %> days</td>
+      <td><%= new Date(inv.start_date).toLocaleDateString() %></td>
+      <td>
+        <% if (inv.status === 'pending') { %>
+          <span style="color: orange;">Pending</span>
+        <% } else if (inv.status === 'confirmed') { %>
+          <span style="color: green;">Confirmed</span>
+        <% } else { %>
+          <span><%= inv.status %></span>
+        <% } %>
+      </td>
+    </tr>
+  <% }) %>
+</table>
+
+    <div class="refus">
+    <div class="ref">Refer Us & Earn</div>
+    <span>Use the below link to invite your friends</span> 
+    <button class="invite">Invite</button>
+    <input type="url" name="" id="" value="https://elitetraders_refer_link.com" />
+    </div>
+            <footer>
+            <p>&copy; 2024 Our Company. All rights reserved.</p>
+        </footer>
+
+        </body>
+<script src="steve_invest.js"></script>
+</html>
+
+
+
+
+ 

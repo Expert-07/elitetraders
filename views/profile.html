@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Investment Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dashnav.css" type="text/css" media="all" />
+    <style>
+        body {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #031531;
+            color: #fff;
+            animation-name: flick;
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+        }
+
+        .dashboard {
+            max-width: 1200px;
+            margin: 30% auto;
+            padding: 20px;
+        }
+        .dash-link{
+            position: relative;
+            margin-top: 50%;
+            font-size: 17px;
+            left: 80%;
+        }
+        .dash-link{
+            text-decoration: underline;
+            color: #00bfff;
+            font-family: Sans-Serif;
+            animation-name: flash;
+            animation-duration: 0.2s;
+            animation-iteration-count: infinite;
+        }
+        @keyframes flash{
+            0%{
+                color: #00bfff;
+            }
+            100%{
+                color: orange;
+            }
+        }
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            color: #00bfff;
+            margin: 0;
+        }
+
+        section {
+            margin-bottom: 20px;
+            padding: 20px;
+            background-color: #042a4f;
+            border-radius: 8px;
+        }
+
+        h2 {
+            color: #00bfff;
+            margin-bottom: 10px;
+            font-size: 1.8em;
+        }
+
+        .profile-icon {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            margin-bottom: 20px;
+        }
+
+        .profile-icon img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 4px solid #00bfff;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #1e90ff;
+            text-align: left;
+        }
+        .info{
+            display: flexbox;
+            margin-top: 50px;
+        }
+
+        .info p {
+            margin: 5px 0;
+        }
+
+        .profile-form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .profile-form label {
+            margin: 10px 0 5px;
+            font-weight: bold;
+        }
+
+        .profile-form select, .profile-form button {
+            padding: 10px;
+            border-radius: 5px;
+            border: 1px solid #1e90ff;
+            background-color: #031531;
+            color: #fff;
+            transition: background-color 0.3s;
+        }
+
+        .profile-form select {
+            cursor: pointer;
+        }
+
+        .profile-form button {
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .profile-form button:hover {
+            background-color: #1e90ff;
+        }
+
+        .investment-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .investment-option {
+            padding: 10px;
+            border: 2px solid transparent;
+            border-radius: 5px;
+            flex: 1 1 calc(25% - 10px);
+            text-align: center;
+            background-color: #021020;
+            transition: background-color 0.3s;
+        }
+
+        .investment-option:hover {
+            background-color: #1e90ff;
+            color: #000;
+        }
+
+        .investment-option p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 768px) {
+            .investment-option {
+                flex: 1 1 calc(50% - 10px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .investment-option {
+                flex: 1 1 100%;
+            }
+        }
+
+        .chart-container {
+            position: relative;
+            margin: 20px 0;
+            height: 300px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+        <header class="header">
+        <nav class="navbar">
+            <span href="#" class="nav-logo">EliteFxtraders.US</span>
+            <i class="fa fa-bell-o"></i>
+            <i class="far fa-user-circle" style="color: white"></i>
+            
+            <ul class="nav-menu">
+                
+ <div class="dropdown">
+    <div class="dropbtn">
+        <button>A</button>
+        <span class="but">
+        Abu Bin Ishityak<br>
+        <span class="span">info@nio.com</span>
+              <i class="fa fa-caret-down"></i>
+
+        </span>
+    </div>
+    <div class="dropdown-content">
+      <a href="#">Link 1</a>
+      <a href="#">Link 2</a>
+      <a href="#">Link 3</a>
+    </div>
+  </div>  
+                
+                <li class="nav-item">
+                    <a href="crypto.html" class="nav-link" id="active">
+     <i class="fa fa-dashboard"></i>                        Dashboard</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plan.html" class="nav-link">
+           
+                        My Account
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="#2" class="nav-link">
+                        <i class='fas fa-wallet' style='font-size:24px'></i>
+                        Wallets
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="3" class="nav-link">My Profile</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="/faqs.html" class="nav-link">FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#1" class="nav-link">Contact</a>
+                </li>
+                <div class="controls">
+                    <a href="/steve_invest_signup.html">
+                        <button id="sign_in" class="sign_in">Sign Up</button>
+                    </a>
+                    <button class="open-button" onclick="openForm()">Log in</button>
+                    </div>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+            </div>
+        </nav>
+</header>    
+
+    <div class="dashboard">
+        <label class="dash-link">
+            Go to dashboard
+        </label>
+        <span class="header">
+            <h1>Account Setting</h1>
+        </span>
+        <section class="profile-icon">
+            <img src="https://via.placeholder.com/150" alt="User Profile Icon">
+                        <div class="info">
+                <p>Name: John Doe</p>
+                <p>Account Balance: $50,000</p>
+            </div>
+
+        </section>
+        <section class="profile">
+            <h2>User Profile</h2>
+            <form class="profile-form" id="profile-form">
+                <label for="investment-options">Choose your investment options:</label>
+                <div class="investment-options">
+                    <div class="investment-option">
+                        <input type="checkbox" id="etfs" value="etfs">
+                        <label for="etfs">ETFs</label>
+                    </div>
+                    <div class="investment-option">
+                        <input type="checkbox" id="cryptocurrency" value="cryptocurrency">
+                        <label for="cryptocurrency">Cryptocurrency</label>
+                    </div>
+                    <div class="investment-option">
+                        <input type="checkbox" id="mutual-funds" value="mutual-funds">
+                        <label for="mutual-funds">Mutual Funds</label>
+                    </div>
+                    <div class="investment-option">
+                        <input type="checkbox" id="stocks" value="stocks">
+                        <label for="stocks">Stocks</label>
+                    </div>
+                </div>
+                <button type="submit">Save Preferences</button>
+            </form>
+        </section>
+        <section class="portfolio">
+            <h2>Stock Portfolio</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Stock</th>
+                        <th>Shares</th>
+                        <th>Price</th>
+                        <th>Value</th>
+                    </tr>
+                </thead>
+                <tbody id="portfolio-body">
+                    <!-- Data will be inserted here -->
+                </tbody>
+            </table>
+        </section>
+        <section class="profit">
+            <h2>Total Profit</h2>
+            <p id="total-profit">$0</p>
+        </section>
+        <section class="chart">
+            <h2>Investment Distribution</h2>
+            <div class="chart-container">
+                <canvas id="investmentChart"></canvas>
+            </div>
+        </section>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="steve_invest.js" type="text/javascript" charset="utf-8"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const portfolioData = [
+                { stock: 'AAPL', shares: 10, price: 150 },
+                { stock: 'GOOGL', shares: 5, price: 2800 },
+                { stock: 'AMZN', shares: 2, price: 3400 }
+            ];
+
+            function calculateTotalProfit(portfolio) {
+                return portfolio.reduce((total, stock) => total + (stock.shares * stock.price), 0);
+            }
+
+        /*    function renderPortfolio(portfolio) {
+                const portfolioBody = document.getElementById('portfolio-body');
+                portfolioBody.innerHTML = '';
+                portfolio.forEach(stock => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${stock.stock}</td>
+                        <td>${stock.shares}</td>
+                        <td>$${stock.price.toFixed(2)}</td>
+                        <td>$${(stock.shares * stock.price).toFixed(2)}</td>
+                    `;
+                    portfolioBody.appendChild(row);
+                });
+            }
+
+            function displayTotalProfit(profit) {
+                const totalProfit = document.getElementById('total-profit');
+                totalProfit.textContent = `$${profit.toFixed(2)}`;
+            }
+*/
+            function savePreferences(event) {
+                event.preventDefault();
+                const selectedOptions = Array.from(document.querySelectorAll('.investment-options input:checked')).map(option => option.value);
+                alert(`Saved preferences: ${selectedOptions.join(', ')}`);
+            }
+
+            const profileForm = document.getElementById('profile-form');
+            profileForm.addEventListener('submit', savePreferences);
+
+            const totalProfit = calculateTotalProfit(portfolioData);
+            renderPortfolio(portfolioData);
+            displayTotalProfit(totalProfit);
+
+            // Chart.js setup
+            const ctx = document.getElementById('investmentChart').getContext('2d');
+            const investmentChart = new Chart(ctx, {
+                type: 'pie',
+                data: {
+                    labels: ['ETFs', 'Cryptocurrency', 'Mutual Funds', 'Stocks'],
+                    datasets: [{
+                        data: [30, 10, 20, 40], // Example data, you can replace with actual data
+                        backgroundColor: ['#00bfff', '#ff6384', '#36a2eb', '#ffce56'],
+                        hoverBackgroundColor: ['#00bfff', '#ff6384', '#36a2eb', '#ffce56']
+                    }]
+                },
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: false,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        tooltip: {
+                            callbacks: {
+                                label: function (context) {
+                                    let label = context.label || '';
+                                    if (label) {
+                                        label += ': ';
+                                    }
+                                    label += context.raw + '%';
+                                    return label;
+                                }
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

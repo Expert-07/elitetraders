@@ -1,0 +1,28 @@
+*{
+    box-sizing: ;
+}
+body{
+    background-color: #031531;
+    color: #f9f9f9;
+}
+article{
+    display: grid;
+    position: relative;
+    padding: 20px;
+   /* border: 1px solid #0dff12;*/
+    height: fit-content;
+    margin-top: 30%;
+    width: 100%;
+    grid-gap: 20px;
+}
+section{
+    width: 100%;
+    height: fit-content;
+    background-color: #031537;
+    font-size: 1.2rem;
+    text-align: center;
+        div{
+           font-size: 3rem;
+}
+        ul
+}

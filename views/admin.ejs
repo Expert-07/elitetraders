@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Panel</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f4f4f4;
+    }
+    h1 {
+      color: #222;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 30px;
+      background: white;
+    }
+    th, td {
+      padding: 12px;
+      border: 1px solid #ccc;
+      text-align: left;
+    }
+    th {
+      background: #009879;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>Admin Dashboard</h1>
+
+  <h2>All Users</h2>
+  <table>
+    <tr><th>ID</th><th>Username</th><th>Email</th></tr>
+    <% users.forEach(user => { %>
+      <tr>
+        <td><%= user.id %></td>
+        <td><%= user.username %></td>
+        <td><%= user.email %></td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <h2>All Investments</h2>
+  <table>
+    <tr><th>ID</th><th>User ID</th><th>Plan</th><th>Amount</th><th>ROI</th><th>Duration</th><th>Start Date</th></tr>
+    <% investments.forEach(inv => { %>
+      <tr>
+        <td><%= inv.id %></td>
+        <td><%= inv.user_id %></td>
+        <td><%= inv.plan %></td>
+        <td>₦<%= inv.amount %></td>
+        <td><%= inv.roi %>%</td>
+        <td><%= inv.duration %> days</td>
+        <td><%= new Date(inv.start_date).toLocaleDateString() %></td>
+      </tr>
+    <% }) %>
+  </table>
+
+  <h2>Pending Payments</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Plan</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <% investments.forEach(inv => { %>
+    <% if (inv.status === 'pending') { %>
+    <tr>
+      <td><%= inv.id %></td>
+      <td><%= inv.user_id %></td>
+      <td><%= inv.plan %></td>
+      <td>₦<%= inv.amount %></td>
+      <td><%= inv.status %></td>
+      <td>
+        <form action="/admin/confirm/<%= inv.id %>" method="POST">
+          <button type="submit">Confirm Payment</button>
+        </form>
+      </td>
+    </tr>
+    <% } %>
+  <% }) %>
+</table>
+
+<h2>Pending Payments</h2>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>User ID</th>
+    <th>Plan</th>
+    <th>Amount</th>
+    <th>Status</th>
+    <th>Action</th>
+  </tr>
+  <% investments.forEach(inv => { %>
+    <% if (inv.status === 'pending') { %>
+    <tr>
+      <td><%= inv.id %></td>
+      <td><%= inv.user_id %></td>
+      <td><%= inv.plan %></td>
+      <td>₦<%= inv.amount %></td>
+      <td><%= inv.status %></td>
+      <td>
+        <form action="/admin/confirm/<%= inv.id %>" method="POST">
+          <button type="submit">Confirm Payment</button>
+        </form>
+      </td>
+    </tr>
+    <% } %>
+  <% }) %>
+</table>
+
+
+</body>
+</html>

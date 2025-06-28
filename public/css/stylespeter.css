@@ -1,0 +1,162 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #3a423c;
+    margin: 0;
+    color: white;
+}
+
+header {
+    
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.chat-container {
+    margin-top: 50px;
+    background: rgb(43, 41, 41);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 80%px;
+}
+ 
+
+.chat-box {
+    height: 300px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+nav {
+    margin-top: 10px;
+    transform: translateY(0);
+    position: sticky;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+ nav a{
+    text-decoration: none;
+ }
+
+main {
+    max-width: 800px;
+    margin: 20px auto;
+    background: #353232;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+ 
+ 
+h2 {
+    margin-top: 20px;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+input, textarea {
+    background-color: #3a423c;
+    margin-bottom: 10px;
+    padding: 10px;
+    color: white;
+    border: 0px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 10px;
+    background-color: #3a423c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+h1{margin-left: 30px;}
+button:hover {
+    background-color: #484b49;
+}
+
+.post {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+    
+}
+.home-section {
+    background-color: black;
+    color: white;
+   margin-top: 20px;
+    padding: 10px 20px;
+text-align: center;
+border-radius: 10px;
+    }
+.post h3 {
+    margin: 0;
+}
+
+.post p {
+    width: 80%;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+}
+.post button{
+    margin-left: 20px;
+}
+h3 button { padding: 5px; width: 25px; border-radius: 5px; align-self: end;}
+ 
+@media screen and (max-width: 768px) {
+    *{
+        font-size:20px;
+    }
+    main{
+        width: 90%;
+    }
+    header h1{
+        font-size: 15px;
+    }
+    .post h3{
+        font-size: 25px;
+    }
+    .post p{
+        font-size: 15px;
+    }
+    nav a{
+         font-size: 12px;
+    }
+    header{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .post button{
+    margin-left: 20px;
+    font-size: 12px;
+}
+}

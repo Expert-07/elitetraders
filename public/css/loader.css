@@ -1,0 +1,32 @@
+.preloader{
+}
+.loader{
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	display: block;
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+	border: solid 1px #031531; 
+	border-width: 0.4rem;
+	border-top-color: #172132;
+	border-bottom-color: #172132;
+	animation: loader 1s 4 ease-out forwards;
+	z-index: 9;
+}
+@keyframes loader {
+	0%{
+		transform: rotate(0deg);
+	}
+	25%{
+		transform: rotate(45deg);
+	}
+	35%{
+		transform: rotate(90deg);
+	}
+	100%{    
+		transform: rotate(360deg);
+        display: none;
+	}
+}

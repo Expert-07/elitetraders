@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Confirm Your Deposit</title>
+  <style>
+    body { font-family: Arial; background: #f9f9f9; padding: 30px; }
+    .card {
+      background: white; padding: 25px; border-radius: 10px;
+      max-width: 600px; margin: auto; box-shadow: 0 0 10px #ccc;
+    }
+    .wallet-box { margin-top: 15px; font-size: 16px; background: #eee; padding: 10px; border-radius: 5px; }
+    button { background: #009879; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Complete Your Investment</h2>
+    <p><strong>Plan:</strong> <%= investment.plan %></p>
+    <p><strong>Amount:</strong> ₦<%= investment.amount %></p>
+    <p><strong>USDT to Send:</strong> <%= usdtAmount %> USDT (TRC20)</p>
+    <p><strong>Wallet Address:</strong></p>
+    <div class="wallet-box"><%= walletAddress %></div>
+
+    <p>After sending, click below to confirm your deposit.</p>
+
+    <form action="/confirm-payment/<%= investment.id %>" method="POST">
+      <button type="submit">I Have Paid</button>
+    </form>
+  </div>
+</body>
+</html>

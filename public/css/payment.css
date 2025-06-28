@@ -1,0 +1,81 @@
+:root{
+    --bgcolor-01: #031531;
+    --bg-color02: #dbdbdde6;
+    --bg-color03: #f6f6f8;
+
+}
+body{
+    background-color: var(--bg-color02)
+}
+.pay{
+    color: var(--bgcolor-01);
+    display: block;
+    background-color: var(--bg-color03);
+    width: 100vh;
+    height: 200vh;
+    margin: 15vh auto;
+        .pay_sub{
+            display: block;
+            padding-top: 10%;
+        }
+        span{
+            font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: var(--bgcolor-01);
+            position: relative;
+            left: 50px;
+        }
+        span:first-child{
+            display: inline-block;
+            border: solid 3px var(--bg-color03);
+            border-bottom-color: var(--bgcolor-01);
+            padding: 5px 20px;
+        }
+        span:last-child{
+            display: inline-block;
+            position: relative;
+            left: 30%;   
+            border: solid 3px var(--bg-color03);
+            border-bottom-color: var(--bgcolor-01);
+            padding: 5px 20px;
+        }
+}
+.acc{
+    position: relative;
+    top: 2em;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-style: italic;
+    font-stretch: narrower;
+    font-weight: 800;
+
+}
+.details{
+    display: flex;
+    position: relative;
+    margin-top: 50px;
+    font: 2em sans-serif;
+}
+.h4{
+    font-size: 2em;
+    text-align: center;
+    font-weight: 600;
+    margin-top: 50px;
+}
+
+.tiles{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    position: relative; 
+    margin: 10% 5%;
+}
+.tile{
+    display: block;
+    position: relative;
+    margin-top: 10%;
+    width: 100%;
+    height: 15vh;
+    border-radius: 5px;
+    background-color: var(--bg-color03);
+    box-shadow: 0px 0px 5px 0.1px #03153176;
+}

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Card Payment Instructions</title>
+  <style>
+    body { font-family: sans-serif; background: #f4f4f4; padding: 30px; }
+    .card { background: white; padding: 25px; border-radius: 10px; max-width: 600px; margin: auto; box-shadow: 0 0 10px #ccc; }
+    button { background: #0074cc; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; margin-top: 20px; }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h2>Card Payment (Manual)</h2>
+    <p><strong>Plan:</strong> <%= investment.plan %></p>
+    <p><strong>Amount:</strong> ₦<%= investment.amount %></p>
+    <p><strong>Bank Info:</strong></p>
+    <ul>
+      <li><strong>Bank:</strong> Paystack</li>
+      <li><strong>Account:</strong> 0123456789</li>
+      <li><strong>Name:</strong> EliteFxtraders</li>
+    </ul>
+    <p>Please use your registered name as the payment reference.</p>
+
+    <!--form action="/confirm-payment/<%= investment.id %>" method="POST"-->
+    <form action="/login" method="GET">
+      <button type="submit">I Have Paid</button>
+
+      <p><strong>Status:</strong>
+      <span style="color: orange;">Pending confirmation</span>
+      </p>
+      <p>After sending the payment, your investment will be reviewed and confirmed by an admin</p>
+    </form>
+  </div>
+</body>
+</html>

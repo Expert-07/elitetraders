@@ -1,0 +1,306 @@
+    
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+body{
+	overflow-x: hidden;
+}
+html {
+	font-size: 62.5%;
+	font-family: 'Roboto', sans-serif;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+.item{
+	display: inline;
+}
+@media screen and (min-width: 768px) {
+	.item{
+		display: none;
+	}
+	
+}
+
+.header{
+box-shadow: 1px 3px 2px #E2E8F0;
+
+
+}
+.body{
+margin-top: 50px;
+}
+.navbar {
+position: fixed;
+z-index: 9;
+top: 0;
+width: 100%;
+height: 70px;
+background-color: #031531;
+opacity: 3;
+display: flex;
+justify-content: space-between;
+align-items: center;
+padding: 1rem 1.5rem;
+}
+.hamburger {
+display: none;
+}
+
+.bar {
+display: block;
+width: 24px;
+height: 3px;
+margin: 5px auto;
+border-radius: 3px;
+-webkit-transition: all 0.3s ease-in-out;
+transition: all 0.3s ease-in-out;
+}
+
+.nav-menu {
+position: relative;
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+
+.nav-item {
+margin-left: 5rem;
+}
+
+.nav-link{
+font-size: 1.2rem;
+font-weight: 400;
+color: #f6f6fa;
+}
+
+.nav-link:hover{
+color: rgba(242, 162, 132, 0.417);
+}
+
+.nav-logo {
+position: relative;
+left: 0;
+font-size: 2.1rem;
+font-weight: 500;
+color: #faf9fa;
+}
+
+
+
+@media (min-width: 1024px) {
+	.navbar {
+	position: fixed;
+	z-index: 9;
+	top: 0;
+	width: 100%;
+	height: 70px;
+	background-color: #031531;
+	opacity: 3;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 1rem 1.5rem;
+	}
+	.hamburger {
+	display: none;
+	}
+	
+	.bar {
+	display: block;
+	width: 24px;
+	height: 3px;
+	margin: 5px auto;
+	border-radius: 3px;
+	-webkit-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+	}
+	
+	.nav-menu {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	}
+	
+	.nav-item {
+	margin-left: 5rem;
+	}
+	
+	.nav-link{
+	font-size: 1.2rem;
+	font-weight: 400;
+	color: #f6f6fa;
+	}
+	
+	.nav-link:hover{
+	color: rgba(242, 162, 132, 0.417);
+	}
+	
+	.nav-logo {
+	position: relative;
+	left: 0;
+	font-size: 2.1rem;
+	font-weight: 500;
+	color: #faf9fa;
+	}
+	.controls{
+		position: relative;
+		top: 0;
+		button{
+		border-radius: 10px;}
+	}
+	
+	.sign_in{
+		width: 100px;
+		height: 35px;
+		font: 12px sans-serif;
+		border: solid 1px #f65206;
+		color: #f1f1f1;
+		background-color: #031531;
+		margin: 0 12px 0 25px;
+		}
+		.sign_in:hover{
+		cursor: pointer;
+		border: solid 1px rgba(242, 162, 132, 0.417);
+		}
+		.open-button{
+		font: 12px sans-serif;
+		border: solid 1px #f1f1f1;
+		cursor: pointer;
+		height: 35px;
+		width: 100px;
+		border: none;
+		color: #fff;
+		background-color: #f65206;
+		margin: 0 12px 0 15px;
+		}
+	
+	}
+	
+
+
+
+
+
+/*MEDIA*/
+@media (max-width: 1023px) {
+
+i{
+    opacity: 0;
+}
+.nav-logo {
+	position: relative;
+	left: 10%;
+	font-size: 1.4rem;
+}
+
+
+.nav-menu {
+	position: fixed;
+	left: -100%;
+	top: 7rem;
+	flex-direction: column;
+	background-color: #031535;
+	height: 80rem;
+	width: 80%;
+	text-align: justify;
+	transition: 0.6s;
+	border-radius: 1px;
+	overflow: scroll;
+}
+.nav-link{
+	position: absolute;
+	width: 100%;
+	left: 3%;
+	color: white;
+	font-size: 1.52rem;
+}
+
+.nav-menu.active {
+	left: 0;
+}
+
+.nav-item {
+
+    padding-left: 3px;
+}
+
+.hamburger {
+	width: 7.3vw;
+	position: relative;
+	right: 95%;
+	display: block;
+	cursor: pointer;
+}
+.bar:last-child{
+    width: 12px;
+}
+.hamburger.active .bar:nth-child(2) {
+	opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+	transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    width: 24px;
+	transform: translateY(-8px) rotate(-45deg);
+}
+
+
+.controls{
+    position: relative;
+    top: 0;
+    button{
+    border-radius: 6px;}
+}
+.sign_in{
+width: 190px;
+height: 50px;
+font: 12px sans-serif;
+border: solid 1px #f65206;
+color: #f1f1f1;
+background-color: #031531;
+margin: 5px 0 0 5px;
+}
+.sign_in:hover{
+cursor: pointer;
+border: solid 1px rgba(242, 162, 132, 0.417);
+}
+.open-button{
+font: 12px sans-serif;
+border: solid 1px #f1f1f1;
+cursor: pointer;
+height: 50px;
+width: 190px;
+border: none;
+color: #fff;
+background-color: #f65206;
+margin: 15px 0 250px 5px;
+}
+}
+@media (max-width: 768px){
+.nav_menu{
+	background-color: #031531;
+}
+.hamburger .bar{
+	background-color: white;
+}
+}
+
+
+
+
+#active{
+	color: rgba(242, 162, 132, 0.417);
+
+}
