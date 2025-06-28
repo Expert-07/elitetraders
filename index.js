@@ -298,7 +298,7 @@ app.post('/invest', async (req, res) => {
 });
 
 
-app.post('/mark')
+app.post('/mark-paid/:id', (req, res) => {});
 function isAdmin(req, res, next) {
   if (req.session.user && req.session.user.is_admin) {
     return next(); // User is admin, proceed to the next middleware
